@@ -6,17 +6,17 @@ export default function Nav() {
     return (
         <div className="nav">
             <div className="nav__div1">
-                <Link to='/'>Home</Link>
+                <Link to='/' className='nav__link'>Home</Link>
             </div>
             <div className="nav__div2">
-                <Link to='/BestOfWinnipeg'>Best of Winnipeg</Link>
-                <Link to='/Restaurants'>Restaurants</Link>
-                <Link to='/LatestNews'>Latest News</Link>
-                <Link to='/Places'>Places</Link>
-                <Link to='/Videos'>Videos</Link>
-                <Link to='/Contests'>Contests</Link>
-                <Link to='/Neighbourhoods'>Neighbourhoods</Link>
-                <Link to='/Patios'>Patios</Link>
+                <Link to='/BestOfWinnipeg' className='nav__link'>Best of Winnipeg</Link>
+                <Link to='/Restaurants' className='nav__link'>Restaurants</Link>
+                <Link to='/LatestNews' className='nav__link'>Latest News</Link>
+                <Link to='/Places' className='nav__link'>Places</Link>
+                <Link to='/Videos' className='nav__link'>Videos</Link>
+                <Link to='/Contests' className='nav__link'>Contests</Link>
+                <Link to='/Neighbourhoods' className='nav__link'>Neighbourhoods</Link>
+                <Link to='/Patios' className='nav__link'>Patios</Link>
             </div>
             <form className="nav__search">
                 <input type="text" name="search" placeholder="Search"></input>
