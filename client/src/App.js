@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Nav from './components/Nav/Nav';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
-function App() {
+import Home from './pages/Home/Home';
+import BestOfWinnipeg from './pages/BestOfWinnipeg/BestOfWinnipeg';
+import Restaurants from './pages/Restaurants/Restaurants';
+import LatestNews from './pages/LatestNews/LatestNews';
+import Places from './pages/Places/Places';
+import Videos from './pages/Videos/Videos';
+import Contests from './pages/Contests/Contests';
+import Neighbourhoods from './pages/Neighbourhoods/Neighbourhoods';
+import Patios from './pages/Patios/Patios';
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <>
+  <BrowserRouter>
+    <Nav/>
+    <Switch>
+      <Route exact path='/' component={Home}/>
+      <Route path='/BestOfWinnipeg' component={BestOfWinnipeg}/>
+      <Route path='/Restaurants' component={Restaurants}/>
+      <Route path='/LatestNews' component={LatestNews}/>
+      <Route path='/Places' component={Places}/>
+      <Route path='/Videos' component={Videos}/>
+      <Route path='/Contests' component={Contests}/>
+      <Route path='/Neighbourhoods' component={Neighbourhoods}/>
+      <Route path='/Patios' component={Patios}/>
+    </Switch>
+    </BrowserRouter>
+  </>
+  )
 }
 
-export default App;
+export default App
